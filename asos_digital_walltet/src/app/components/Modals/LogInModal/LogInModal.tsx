@@ -123,10 +123,11 @@ export const LogInModal: React.FC = ({}) => {
                 <Label htmlFor="authCode" value="Auth Code" />
               </div>
               <TextInput
-                placeholder="123456"
+                placeholder="Enter Auth Code"
                 id="authCode"
                 type="text"
                 maxLength={6}
+                minLength={6}
                 value={authCode}
                 onChange={handleAuthCodeChange}
                 required
@@ -135,7 +136,11 @@ export const LogInModal: React.FC = ({}) => {
             <div className={styles["w-full"]}>
               <Button
                 onClick={handleLogIn}
-                disabled={email && password ? false : true}
+                disabled={
+                  email && password && authCode && authCode.length == 6
+                    ? false
+                    : true
+                }
               >
                 Log In
               </Button>

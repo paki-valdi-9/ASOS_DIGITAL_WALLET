@@ -99,7 +99,7 @@ export const QrModal: React.FC<IQrModal> = ({ qrImage }) => {
               <Label htmlFor="authCode" value="Auth Code" />
             </div>
             <TextInput
-              placeholder="123456"
+              placeholder="Enter Auth Code"
               id="authCode"
               type="text"
               maxLength={6}
@@ -109,7 +109,10 @@ export const QrModal: React.FC<IQrModal> = ({ qrImage }) => {
             />
           </div>
           <div className="w-full">
-            <Button onClick={handleSet2fa} disabled={authCode ? false : true}>
+            <Button
+              onClick={handleSet2fa}
+              disabled={authCode && authCode.length == 6 ? false : true}
+            >
               Set 2Auth
             </Button>
           </div>
