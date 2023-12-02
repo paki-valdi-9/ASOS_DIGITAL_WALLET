@@ -224,7 +224,7 @@ export const AddCardModal: React.FC<IAddCardModal> = ({ slot }) => {
               type="text"
               name="type"
               placeholder="Visa"
-              maxLength={15}
+              maxLength={20}
               value={type}
               onChange={inputValidation}
               color={cardTypeValidated ? "success" : "failure"}
