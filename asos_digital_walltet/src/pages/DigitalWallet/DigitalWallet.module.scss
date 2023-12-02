@@ -1,0 +1,172 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+    height: 100vh;
+    width: 100vw;
+}
+
+.background-container {
+    width: 70%;
+    max-width: 80%;
+    height: 80%;
+    background-color: transparent;
+    // border-radius: .4rem;
+    color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    // box-shadow: #6C5B7B 0px -70px 130px 5px;
+    overflow: hidden;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    height: 10rem;
+    z-index: 1;
+    font-size: large;
+    color: white
+}
+
+.title-container div {
+    width: 49%;
+    background-color: white;
+    border-radius: .3125rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.my-wallet-container {
+    display: flex;
+}
+
+.my-wallet-container div {
+    background-color: transparent;
+}
+
+.my-wallet-headline {
+    width: 100% !important;
+    background-color: transparent;
+    color: #2E2020;
+    font-size: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.my-wallet-send{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.my-wallet-send button{
+    border-radius: .75rem;
+    color: white;
+    background-color: #2E2020;
+    box-shadow: none;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.container-balance {
+    color: #2E2020;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.log-sign-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    height: 85%;
+}
+
+.log-sign-container button {
+    width: 11.875rem;
+    height: 11.875rem;
+    color: white;
+    background-color: #ecc1b0;
+}
+
+.log-sign-container button:hover {
+    background-color: white;
+    color: #F67280;
+}
+
+.footer-btns button{
+    justify-content: space-between;
+    border: none;
+    box-shadow: none;
+    background-color: unset;
+    margin: .125rem 1rem .125rem .75rem;
+}
+
+.table-container div h4 {
+    font-size: 2px;
+}
+
+.second-section {
+    display: flex;
+    justify-content: space-between;
+    height: 30rem;
+    z-index: 1;
+    font-size: .75rem !important;
+    color: #2E2020 !important;
+    margin: 1rem 0 0 0;
+}
+
+.table-container div {
+    width: 100% !important;
+}
+
+.second-section, .credit-card, .transaction-history{
+    width: 100%;
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+}
+
+.transaction-history {
+    width: 49%;
+    background-color: white;
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+}
+
+.transaction-history div{
+    height: 100% !important;
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+}
+
+.credit-card {
+    width: 49%;
+    background-color: white;
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+}
+
+.credit-card div{
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+}
+
+.second-section div, h4, p{
+    color: #2E2020 !important;
+}
+
+.footer-btns {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    color: #2E2020 !important;
+    border-radius: .3125rem;
+    margin: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
