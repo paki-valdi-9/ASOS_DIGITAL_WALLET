@@ -38,7 +38,6 @@ export const CardHeadline: React.FC = () => {
         return response.json();
       })
       .then((data: any) => {
-        console.log(data);
         if (data.currency) {
           setCurrency(data.currency);
         }
