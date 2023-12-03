@@ -91,7 +91,6 @@ export const CreateTransactionModal: React.FC = ({}) => {
   };
 
   const handleUserTransaction = (): void => {
-    console.log("user");
     const transactionData = {
       userId,
       email,
@@ -127,7 +126,6 @@ export const CreateTransactionModal: React.FC = ({}) => {
   };
 
   const handleCardTransaction = (): void => {
-    console.log("card");
     const transactionData = {
       userId,
       email,
