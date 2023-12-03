@@ -39,7 +39,6 @@ export const CardHeadline: React.FC = () => {
         return response.json();
       })
       .then((data: any) => {
-        console.log(data);
         if (data.name) {
           setUsersName(data.name);
         } else {
