@@ -31,7 +31,7 @@
     width: 100% !important;
     background-color: transparent;
     color: #2E2020;
-    font-size: 25px;
+    font-size: 1rem;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -40,7 +40,13 @@
 
 .my-wallet-headline h1 {
     color: #2E2020;
+    font-size: 2.75rem;
     font-weight: 600;
+}
+
+.my-wallet-headline h2 {
+    color: #2E2020;
+    margin-top: .325rem;
 }
 
 .my-wallet-send{

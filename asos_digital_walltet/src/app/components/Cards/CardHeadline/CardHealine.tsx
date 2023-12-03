@@ -16,8 +16,9 @@ export const CardHeadline: React.FC = () => {
   const userId: string = params.userId ?? "";
   const [balance, setBalance] = useState("");
   const [currency, setCurrency] = useState("");
+  const [usersName, setUsersName] = useState("");
   const appInfo = {
-    headline: "My Wallet",
+    headline: `${usersName}'s`,
     firstSection: "Send",
     balance: "Total Balance:",
   };
@@ -27,6 +28,29 @@ export const CardHeadline: React.FC = () => {
   };
 
   useEffect(() => {
+    fetch(`http://localhost:3000/${userId}`, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data: any) => {
+        console.log(data);
+        if (data.name) {
+          setUsersName(data.name);
+        } else {
+          setUsersName("Your");
+        }
+      })
+      .catch((error) => {
+        displayToast("error", "Fetch Error", "Failed to get user balace.");
+        console.error("Error:", error);
+      });
+
     fetch(`http://localhost:3000/balance/${userId}`, {
       method: "GET",
       credentials: "include",
@@ -58,6 +82,7 @@ export const CardHeadline: React.FC = () => {
         <div className={styles["my-wallet-container"]}>
           <div className={styles["my-wallet-headline"]}>
             <h1>{appInfo.headline}</h1>
+            <h2>wallet</h2>
           </div>
           <div className={styles["my-wallet-send"]}>
             <Button
