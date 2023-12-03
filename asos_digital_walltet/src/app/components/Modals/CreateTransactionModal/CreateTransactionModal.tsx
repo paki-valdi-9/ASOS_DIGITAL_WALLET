@@ -207,10 +207,7 @@ export const CreateTransactionModal: React.FC = ({}) => {
             </h3>
             <div>
               <div className="mb-2 block">
-                <Label
-                  htmlFor="card-select"
-                  value="Select card where to withdraw"
-                />
+                <Label htmlFor="card-select" value="Payment Method" />
               </div>
               <div className={styles["select-card-input"]}>
                 <Select
@@ -220,8 +217,8 @@ export const CreateTransactionModal: React.FC = ({}) => {
                   onChange={handleMethodChange}
                 >
                   <MenuItem value={undefined}>None</MenuItem>
-                  <MenuItem value={1}>Balance Method</MenuItem>
-                  <MenuItem value={2}>Card Method</MenuItem>
+                  <MenuItem value={1}>From Balance</MenuItem>
+                  <MenuItem value={2}>From Card</MenuItem>
                 </Select>
               </div>
               {Number(method) === 2 ? (
@@ -240,8 +237,12 @@ export const CreateTransactionModal: React.FC = ({}) => {
                       onChange={handleCardChange}
                     >
                       <MenuItem value={undefined}>None</MenuItem>
-                      {card1 ? <MenuItem value={1}>Card1</MenuItem> : undefined}
-                      {card2 ? <MenuItem value={2}>Card2</MenuItem> : undefined}
+                      {card1 ? (
+                        <MenuItem value={1}>Card 1</MenuItem>
+                      ) : undefined}
+                      {card2 ? (
+                        <MenuItem value={2}>Card 2</MenuItem>
+                      ) : undefined}
                     </Select>
                   </div>
                 </>
@@ -249,7 +250,7 @@ export const CreateTransactionModal: React.FC = ({}) => {
                 <></>
               )}
               <div className="mb-2 block">
-                <Label htmlFor="email" value="Sender Email Address" />
+                <Label htmlFor="email" value="Reciever Email Address" />
               </div>
               <TextInput
                 id="email"

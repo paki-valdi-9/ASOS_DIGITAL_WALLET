@@ -150,8 +150,8 @@ export const DepositModal: React.FC = ({}) => {
                 onChange={handleChange}
               >
                 <MenuItem value={undefined}>None</MenuItem>
-                {card1 ? <MenuItem value={1}>Card1</MenuItem> : undefined}
-                {card2 ? <MenuItem value={2}>Card2</MenuItem> : undefined}
+                {card1 ? <MenuItem value={1}>Card 1</MenuItem> : undefined}
+                {card2 ? <MenuItem value={2}>Card 2</MenuItem> : undefined}
               </Select>
             </div>
             <div className="mb-2 block">
